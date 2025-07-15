@@ -1,0 +1,23 @@
+{
+    "name": "lsm-cache-server",
+    "version": "1.0.0",
+    "description": "LSM Tree backed cache with HTTP APIs and React UI",
+    "main": "server/index.js",
+    "scripts": {
+        "start": "node server/index.js",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "nodemon server/index.js",
+        "client": "cd client && npm start",
+        "build": "cd client && npm run build",
+        "install-all": "npm install && cd client && npm install"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5",
+        "body-parser": "^1.20.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "concurrently": "^8.2.0"
+    }
+}
